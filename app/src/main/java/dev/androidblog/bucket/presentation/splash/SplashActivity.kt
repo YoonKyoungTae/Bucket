@@ -11,6 +11,7 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
 
     override fun initView() {
         startActivity(Intent(this, MainActivity::class.java))
+        finish()
     }
 
 }

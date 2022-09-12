@@ -23,9 +23,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     }
 
     private fun initFragment() {
-        supportFragmentManager.commit {
-            add(R.id.clParent, HomeFragment.getInstance(), HomeFragment.TAG)
-        }
+//        supportFragmentManager.commit {
+//            add(R.id.clParent, HomeFragment.getInstance(), HomeFragment.TAG)
+//        }
     }
 
 }
