@@ -1,5 +1,7 @@
 package dev.androidblog.bucket.presentation.home
 
+import android.view.LayoutInflater
+import android.view.ViewGroup
 import dev.androidblog.bucket.databinding.FragmentHomeBinding
 import dev.androidblog.bucket.presentation.base.BaseFragment
 
@@ -15,7 +17,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
     }
 
-    override fun bindingLayout(): FragmentHomeBinding = FragmentHomeBinding.inflate(layoutInflater)
+    override fun bindingLayout(inflater: LayoutInflater, container: ViewGroup?): FragmentHomeBinding {
+        return FragmentHomeBinding.inflate(inflater, container, false)
+    }
 
     override fun initView() {
 

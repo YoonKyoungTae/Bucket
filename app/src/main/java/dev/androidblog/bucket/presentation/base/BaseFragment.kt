@@ -6,19 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
-import dev.androidblog.bucket.R
 import timber.log.Timber
 
 abstract class BaseFragment<VB : ViewBinding> : Fragment() {
 
     var binding: VB? = null
 
-    abstract fun bindingLayout(): VB
+    abstract fun bindingLayout(inflater: LayoutInflater, container: ViewGroup?): VB
 
     abstract fun initView()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        binding = inflater.inflate(R.layout.fragment_home, container, false)
+        binding = bindingLayout(inflater, container)
         return binding?.root
     }
 
