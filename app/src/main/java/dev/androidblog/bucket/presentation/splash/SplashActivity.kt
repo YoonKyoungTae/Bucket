@@ -14,4 +14,8 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
         finish()
     }
 
+    override fun initData() {
+        TODO("Not yet implemented")
+    }
+
 }

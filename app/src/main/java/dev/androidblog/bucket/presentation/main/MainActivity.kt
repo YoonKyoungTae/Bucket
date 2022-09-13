@@ -1,12 +1,8 @@
 package dev.androidblog.bucket.presentation.main
 
 import androidx.activity.viewModels
-import androidx.fragment.app.commit
-import dev.androidblog.bucket.R
-import dev.androidblog.bucket.core.extensions.safe
 import dev.androidblog.bucket.databinding.ActivityMainBinding
 import dev.androidblog.bucket.presentation.base.BaseActivity
-import dev.androidblog.bucket.presentation.home.HomeFragment
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
 
@@ -15,10 +11,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     override fun bindingLayout(): ActivityMainBinding = ActivityMainBinding.inflate(layoutInflater)
 
     override fun initView() {
-        binding.safe {
-
-        }
-
         initFragment()
     }
 
@@ -26,6 +18,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 //        supportFragmentManager.commit {
 //            add(R.id.clParent, HomeFragment.getInstance(), HomeFragment.TAG)
 //        }
+    }
+
+    override fun initData() {
+        TODO("Not yet implemented")
     }
 
 }

@@ -13,11 +13,14 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
 
     abstract fun initView()
 
+    abstract fun initData()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = bindingLayout()
         setContentView(binding?.root)
         initView()
+        initData()
     }
 
     override fun onResume() {
